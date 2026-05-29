@@ -86,7 +86,6 @@ EMP001,40000,10000,5000,3000,May 2026
 ```
 Net Salary = (Base Salary + HRA + Allowances) - Deductions
 ```
-<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/faeaef46-cc9c-4bb2-9a5a-508366ea673f" />
 
 
 ## Bonus Feature — Password Protected PDFs
