@@ -12,7 +12,7 @@ public class AppConfig implements WebMvcConfigurer {
         registry.addMapping("/api/**")
                 .allowedOrigins(
                     "http://localhost:3000",
-                    "https://salary-slip-system-frontend.onrender.com"
+                    "https://salary-slip-systemss.onrender.com/"
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
