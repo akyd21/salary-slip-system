@@ -80,11 +80,13 @@ npm run dev
 EmployeeID,BaseSalary,HRA,Allowances,Deductions,Month
 EMP001,40000,10000,5000,3000,May 2026
 ```
+<img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/debe5869-368f-4661-baf2-435e4aa0edfd" />
 
 ## Net Salary Formula
 ```
 Net Salary = (Base Salary + HRA + Allowances) - Deductions
 ```
+
 
 ## Bonus Feature — Password Protected PDFs
 Enable the checkbox before uploading. PDF password = `FirstName + BirthYear`
