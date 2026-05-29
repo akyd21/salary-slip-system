@@ -1,6 +1,5 @@
 const BASE_URL = "https://salary-slip-system-1.onrender.com";
 
-
 export const api = {
   uploadSalaryFile: async (file) => {
     const formData = new FormData();
