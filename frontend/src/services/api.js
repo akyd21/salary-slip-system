@@ -1,4 +1,4 @@
-const BASE_URL = "https://salary-slip-system-1.onrender.com";
+const BASE_URL = "https://salary-slip-system-1.onrender.com/api/employees";
 
 export const api = {
   uploadSalaryFile: async (file) => {
