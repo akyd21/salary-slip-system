@@ -13,9 +13,7 @@ public class AppConfig implements WebMvcConfigurer {
                 .allowedOrigins(
                      "http://localhost:3000",
                     "https://salary-slip-systemms.onrender.com"
-                    
-                    
-                    
+                      
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")

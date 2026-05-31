@@ -58,7 +58,13 @@ public class PayrollService {
             preview.add(row);
         }
 
-        // Save raw records to DB for later dispatch
+        // ✅ FIX 1: Pehle us month ke purane/duplicate records delete karo
+        if (!rawRecords.isEmpty()) {
+            String month = rawRecords.get(0).getMonth();
+            salaryRepo.deleteByMonth(month);
+        }
+
+        // Ab fresh records save karo
         salaryRepo.saveAll(rawRecords);
 
         UploadResponseDTO response = new UploadResponseDTO();
@@ -73,7 +79,8 @@ public class PayrollService {
     // ── Step 2: Admin confirms → generate PDFs → send emails ─────────
 
     public DispatchResultDTO dispatchSalarySlips(String month, boolean passwordProtect) {
-        List<SalaryRecord> records = salaryRepo.findByMonth(month);
+        // ✅ FIX 2: Sirf PENDING records lo — already SENT wale skip honge
+        List<SalaryRecord> records = salaryRepo.findByMonthAndStatus(month, "PENDING");
         DispatchResultDTO result   = new DispatchResultDTO();
         List<String> failed        = new ArrayList<>();
         int success = 0, failure = 0;
